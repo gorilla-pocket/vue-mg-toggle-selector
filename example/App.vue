@@ -1,26 +1,3 @@
-# vue-mg-toggle-selector
-
-![npm](https://img.shields.io/npm/v/vue-mg-toggle-selector)
-![npm](https://img.shields.io/npm/dm/vue-mg-toggle-selector)
-
-## Installation
-
-```
-npm i vue-mg-toggle-selector
-```
-
-## Usage
-
-app.js
-
-```javascript
-import ToggleSelector from 'vue-mg-toggle-selector'
-Vue.component('ToggleSelector', ToggleSelector)
-```
-
-Example:
-
-```html
 <template>
   <section class="container">
     <toggle-selector v-model="value1"/> value1: {{value1}}
@@ -50,8 +27,3 @@ export default {
   },  
 }
 </script>
-```
-
-## License
-
-MIT
