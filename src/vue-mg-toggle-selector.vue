@@ -5,7 +5,7 @@
     </div>
     <div class="btn-group" role="group" v-else>
         <template v-for="(option, index) in options">
-            <button type="button" class="btn btn-outline-primary" :style="styleObject" :class="classObject(option)" @click="onChange(option)" :key="index">{{option}}</button>
+            <button type="button" class="btn btn-outline-primary" :style="styleObject" :class="classObject(option)" :value="option.name" @click="onChange(option.name)" :key="index">{{option.name}}</button>
         </template>
     </div>
 </template>
@@ -55,10 +55,17 @@ export default {
             }
         },
         classObject() {
-            return (name) => {
+            return (option) => {
                 return {
-                    active: this.value==name,
-                    
+                    active: this.value==option.name,
+                    'btn-outline-primary': option.btnColor == 'primary' || !option.btnColor,
+                    'btn-outline-secondary': option.btnColor == 'secondary',
+                    'btn-outline-success': option.btnColor == 'success',
+                    'btn-outline-danger': option.btnColor == 'danger',
+                    'btn-outline-warning': option.btnColor == 'warning',
+                    'btn-outline-info': option.btnColor == 'info',
+                    'btn-outline-light': option.btnColor == 'light',
+                    'btn-outline-dark': option.btnColor == 'dark',
                 }
             }
         },

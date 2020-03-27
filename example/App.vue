@@ -20,7 +20,11 @@ export default {
       value2: '',
       value3: '',
       value4: '',
-      options: [ 'OK', 'NG', '-', ],
+      options: [
+        { name: 'OK', btnColor: 'primary' },
+        { name: 'NG', btnColor: 'danger' },
+        { name: '-', btnColor: 'dark' },
+      ],
     }
   },
     methods: {
